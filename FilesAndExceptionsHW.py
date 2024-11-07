@@ -38,6 +38,9 @@ def main():
             except ValueError:
                 print(f"ERROR: Could not convert '{line}' to a number.")
 
+            #if there is an error, skip to next line
+            line = infile.readline()
+
     except IOError:
         print('ERROR: Could not open or read the file')
 
