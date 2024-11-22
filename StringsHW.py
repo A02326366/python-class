@@ -29,7 +29,7 @@ def main():
         #split the names
         first, last = name.split(" ")
 
-        #make last, first
+        #make the names last, first
         name_pair.append((last, first))
 
     #alphabetize
@@ -37,7 +37,8 @@ def main():
 
     #Print the results
 
-    print(name_pair)
+    for last, first in name_pair:
+        print(f"{last}, {first}")
 
 if __name__ == "__main__":
     main()
