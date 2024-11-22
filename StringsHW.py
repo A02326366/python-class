@@ -13,11 +13,15 @@ def main():
 
 
     #Get user input for name
-    print("Enter a list of names. Include both first and last names and seperate them by a comma.")
+    print("Enter a list of names. Include both first and last names and seperate them by a comma and a space.")
     my_string = input('Enter names: ')
+    print(" ")
+
+    #Capitalize the values in the string for personal preference
+    #I did look this up online as I could not find it in previous PowerPoints
+    my_string = my_string.title()
 
     #split the string into individual name pairs by the commas and spaces
-
     names = my_string.split(", ")
 
     #define list to put the name pairs into
@@ -26,11 +30,16 @@ def main():
     #organize by last, first
 
     for name in names:
-        #split the names
-        first, last = name.split(" ")
+        try:
+            #split the names
+            first, last = name.split(" ")
 
-        #make the names last, first
-        name_pair.append((last, first))
+            #make the names last, first
+            name_pair.append((last, first))
+
+        except ValueError:
+            print(f"ERROR: '{name}' is in an invalid format.")
+            print(" ")
 
     #alphabetize
     name_pair.sort()
