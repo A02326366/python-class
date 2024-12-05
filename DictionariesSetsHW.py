@@ -25,8 +25,15 @@ def unique_words(file_name):
                 return
 
             # Convert content to lowercase and remove punctuation
-            # I looked up a more efficient way to remove non-alpha characters
-            content = content.lower()         
+            # I had to look up a way to remove any non-alpha characters
+            content = content.lower()
+            for ch in content:
+                if not isalpha():
+
+                    
+
+                else:
+                    
             
             # Create empty set to store unique words
             unique_words = set()
