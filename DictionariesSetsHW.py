@@ -24,15 +24,15 @@ def unique_words(file_name):
                 print("The file is empty. Please try again")
                 return
 
-            # Convert content to lowercase and remove punctuation
-            # I had to look up a way to remove any non-alpha characters
+            # Convert content to lowercase
             content = content.lower()
-            for ch in content:
-                if not isalpha():
 
-                    
+            # Remove any punctuations or non-alpha characters
+            for digit in '0123456789':
+                content = content.replace(digit , '')
 
-                else:
+            for ch in ''',.:;!?'"''':
+                content = content.replace(ch , '')
                     
             
             # Create empty set to store unique words
